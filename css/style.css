@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Quantico&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@1,500&family=Italianno&display=swap');
 body{
     width: 80%;
     height: 100vh;
     margin: auto;
+    background-image:linear-gradient(120deg, rgb(7, 62, 87), rgb(4, 93, 41));
+    background-repeat: no-repeat;
 }
 .date{
     display: grid;
@@ -22,6 +26,7 @@ body{
     text-shadow: 0px 0px 15px #eb4242;
     font-family: 'Quantico', sans-serif;
     margin-top: -30px;
+    line-height: 180px;
 }
 .date b{
     color:rgb(255, 244, 83);
@@ -39,6 +44,15 @@ body{
     font-size: 35px;
     font-family: 'Andada Pro', serif;
 }
+.calendar h2{
+    font-family: 'Italianno', cursive;
+    color:rgb(101, 255, 234);
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+
 
 @media (max-width: 920px){
     body{
@@ -52,12 +66,16 @@ body{
     .time{
         font-size: 60px;
         line-height: 40px;
+        line-height: 150px;
     }
     .calendar{
         margin-top: -70px;
     }
     .data_times{
         font-size: 25px;
+    }
+    .calendar h2{
+        margin-top: 60px;
     }
 }
 
@@ -73,6 +91,7 @@ body{
     .time{
         font-size: 40px;
         margin-top: -10px;
+        line-height: 40px;
     }
     .calendar{
         margin-top: -30px;
@@ -82,5 +101,8 @@ body{
         font-size: 25px;
         text-align: center;
         line-height: 35px;
+    }
+    .calendar h2{
+        margin-top: 50px;
     }
 }
