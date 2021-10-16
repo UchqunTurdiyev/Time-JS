@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="date">
+        <b>Time</b>
+        <h1 class="time">
+        <span class="hours">00 </span> :
+        <span class="minuts">00 </span> :
+        <span class="seconds">00 </span>
+    </h1>
+    <!-- CALENDARS DATA -->
+    <div class="calendar">
+          <h1 class="data_times">
+          <span class="years">00 </span>-yil
+        <span class="mons">00 </span> sana
+        <span class="dates">00</span>
+        <span class="day">00 </span> kuni
+    </h1>
+    </div>
+    </div>
+  
+    <script>
+
+     function timeShower (){    
+        let timeNow = new Date();
+        document.querySelector('.hours').textContent = timeNow.getHours();
+        document.querySelector('.minuts').textContent = timeNow.getMinutes();
+        document.querySelector('.seconds').textContent = timeNow.getSeconds();
+     }
+     timeShower();
+     setInterval(function(){
+         timeShower();
+     }, 1000);
+
+     // 2 FUNCTION DATE CALENDARS
+
+     function timeShow (){  
+         let timeNow = new Date();
+        
+         let months = ["Yanvar", "Fevral","Mart","Aprel","May","Iyun","Iyul","Avgust","Sentabr","Octabr","Noyabr","Decabr"];
+        let days = ["Dushanba","Seshanba","Chorshanba","Payshanba","Juma","Shanba","Yakshanba"];
+
+         let year = timeNow.getFullYear();
+         let mon = timeNow.getMonth();
+         let date = timeNow.getDate();
+         let day = timeNow.getDay();
+
+     let calendarYears = year;
+     let calendarMonth = months[mon];
+     let calendarDay = days[day];
+      
+      document.querySelector('.years').textContent = calendarYears;
+         document.querySelector('.mons').textContent = calendarMonth;
+         document.querySelector('.dates').textContent = date;
+         document.querySelector('.day').textContent = calendarDay;
+       
+      }
+
+      timeShow();
+      setInterval(function(){
+          timeShow();
+      }, 1000);
+
+    </script>
+</body>
+</html>
