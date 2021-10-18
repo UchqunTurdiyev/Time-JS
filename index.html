@@ -11,9 +11,7 @@
     <div class="date">
         <b>Time</b>
         <h1 class="time">
-        <span class="hours">00 </span> :
-        <span class="minuts">00 </span> :
-        <span class="seconds">00 </span>
+        <span class="hours">00 </span>
     </h1>
     <!-- CALENDARS DATA -->
     <div class="calendar">
@@ -29,16 +27,16 @@
   
     <script>
 
-     function timeShower (){    
-        let timeNow = new Date();
-        document.querySelector('.hours').textContent = timeNow.getHours();
-        document.querySelector('.minuts').textContent = timeNow.getMinutes();
-        document.querySelector('.seconds').textContent = timeNow.getSeconds();
-     }
-     timeShower();
-     setInterval(function(){
-         timeShower();
-     }, 1000);
+function showTime (){
+  let d = new Date();
+let n = d.toTimeString().split(" ")[0];
+
+document.querySelector('.hours').textContent = n;
+}
+showTime();
+setInterval(() => {
+    showTime();
+}, 1000);
 
      // 2 FUNCTION DATE CALENDARS
 
